@@ -274,4 +274,4 @@ ggplot(data = weight_merge) +
 ![image](https://user-images.githubusercontent.com/110094376/189731814-e889dc22-11ff-4ff2-9496-37d901f53456.png)
 
 
-
+ 
