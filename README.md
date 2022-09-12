@@ -28,3 +28,9 @@ marketing extensively. Bellabeat invests year-round in Google Search, maintainin
 consistently engages consumers on Twitter. Additionally, Bellabeat runs video ads on Youtube and display ads on the Google
 Display Network to support campaigns around key marketing dates. 
 
+
+## 1. ASK 
+**Business Taks: Analyze the available data fron Fitbit to gain insights and help guide marketing strategy for Bellabeat company to become a larger player in the global smart device market.
+
+Primary stakeholders: Urška Sršen and Sando Mur, executive team members.
+Secondary stakeholders: Bellabeat marketing analytics team.
