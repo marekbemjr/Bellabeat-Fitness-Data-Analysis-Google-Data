@@ -247,6 +247,7 @@ ggplot(data = daily_activity) +
 
 Positive correlation between calories burned and total distance/total active hours. The relationship between sedentary hours and calories burned after 17 hours the values drop, which may indicate fatigue and too much sedentary work.
 
+
 ## Next I would like to check relationship between weight & physical activity, where after we infer that users weighing around 60kg & 85kg are the most active.
 
 MERGE the tables so we can carry out plotting.
