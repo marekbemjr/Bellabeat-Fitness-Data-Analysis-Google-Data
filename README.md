@@ -208,3 +208,8 @@ ggplot(data = daily_activity) +
 
 ![image](https://user-images.githubusercontent.com/110094376/189725118-4c613929-913a-4415-bcf5-91882c320ca9.png)
 
+Users spend more time engaged in physical activity specifically on Sundays, which then proceeds to wane throughout the week with a slight peak on Thursdays which then sees a slow climb on Saturdays.
+
+
+
+
