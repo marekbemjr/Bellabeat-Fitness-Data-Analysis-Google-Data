@@ -10,7 +10,6 @@ _In order to answer the key business questions, I will follow the 6 steps of the
 ### [Share](#5-share) 
 ### [Act](#6-act)
 
-
 ## Scenerio 
 Bellabeat is a successful small company, but they have the potential to become a larger player in the global smart device market.
 Bellabeat, believes that analyzing smart device fitness data could help unlock new growth opportunities for the company. Your team have been asked to analyze smart device data to gain insight into how consumers are using their smart devices. The insights you discover will then help guide marketing strategy for the company.
@@ -30,7 +29,64 @@ Display Network to support campaigns around key marketing dates.
 
 
 ## 1. ASK 
-**Business Taks: Analyze the available data fron Fitbit to gain insights and help guide marketing strategy for Bellabeat company to become a larger player in the global smart device market.
+**Business Taks: Analyze the available data fron Fitbit to gain insights and help guide marketing strategy for Bellabeat company to become a larger player in the global smart device market.**
 
-Primary stakeholders: Urška Sršen and Sando Mur, executive team members.
-Secondary stakeholders: Bellabeat marketing analytics team.
+**Primary stakeholders: Urška Sršen and Sando Mur, executive team members.**
+
+**Secondary stakeholders: Bellabeat marketing analytics team.**
+
+## 2. PREPARE
+Data Source: https://www.kaggle.com/datasets/arashnic/fitbit
+
+This Kaggle data set contains personal fitness tracker from 30 fitbit users. Fitbit users consented to the submission of
+personal tracker data, including minute-level output for physical activity, heart rate, and sleep monitoring. It includes
+information about daily activity, steps, and heart rate that can be used to explore users’ habits
+
+The dataset includes 18 .csv files in long format. 
+
+The data also follow a ROCCC approach:
+- **Reliability**: The data is from 30 FitBit users who consented to the submission of personal tracker data.
+- **Original**: The data is from 30 FitBit users who consented to the submission of personal tracker data.
+- **Comprehensive**: Data minute-level output for physical activity, heart rate, and sleep monitoring. While the data tracks many factors in the user activity and sleep, but the sample size is small and data is recorded only during less then  2 months.  
+- **Current**: Data is from April 2020 to May 2020. Data is not actual so the users habit may be different now. 
+- **Cited**: Unknown
+
+⛔ The dataset has limitations:
+- The database contains only 30 users. This is a small sample, to be analysed on a larger sample and more recent is desirable for in-depth analysis.
+- Upon further investigation with ```distinct()``` to check for unique user Id, the set shows 33 user data from daily_activity database, 24 from daily_sleep and only 8 from weight. There are 3 extra users and some users did not record their data for tracking daily activity and sleep. 
+
+## 3. PROCESS
+
+At this stage of the analysis, I decided to use R. 
+
+After installing the packages 
+```
+install.packages('tidyverse')
+install.packages('janitor')
+install.packages('lubridate')
+install.packages('skimr')
+```
+```
+library(tidyverse) #wrangle data
+library(janitor) #cleaning data
+library(lubridate) #wrangle data attributes
+library(skimr) #summary data
+library(ggplot2) #visualize data
+```
+and loaded the selected databases to analyze
+```
+daily_activity <- read.csv("dailyActivity_merged.csv")
+daily_sleep <- read.csv("sleepDay_merged.csv")
+weight <- read.csv("weightLogInfo_merged.csv")
+```
+I started inspect data to see if there are any errors with formatting
+
+```
+head(daily_activity)
+head(daily_sleep)
+head(weight)
+
+str(daily_activity)
+str(daily_sleep)
+str(weight)
+```
