@@ -182,7 +182,8 @@ The average very active minutes also is less of the recommended 30 minutes of vi
 The average hours spent asleep (6.9) also barely hits the quota of the recommended sleep time of 7–9 hours.
 
 
-By using ggplot for this section of the analysis phase we can check which days are users most active:
+
+## By using ggplot for this section of the analysis phase we can check which days are users most active:
 ```
 ggplot(data = daily_activity) +
   aes(x = day_of_week, y = total_active_hours) +
@@ -210,6 +211,34 @@ ggplot(data = daily_activity) +
 
 Users spend more time engaged in physical activity specifically on Sundays, which then proceeds to wane throughout the week with a slight peak on Thursdays which then sees a slow climb on Saturdays.
 
+## Next investigate the relationship between total active hours, total distance, and sedentary hours against calories burned:
+
+```
+ggplot(data = daily_activity) +
+  aes(x= total_active_hours, y = calories) +
+  geom_point(color = 'red') +
+  geom_smooth() +
+  labs(x = 'Total active hours', y = 'Calories burned', title = 'Calories burned vs active hours')
+```
+![image](https://user-images.githubusercontent.com/110094376/189726178-03102513-9292-4b98-aa8d-ca326f530c5a.png)
+
+```
+ggplot(data = daily_activity) +
+  aes(x= total_distance, y = calories) +
+  geom_point(color = 'orange')+
+  geom_smooth() +
+  labs(x = 'Total distance', y = 'Calories burned', title = 'Calories burned vs total distance')
+```
+![image](https://user-images.githubusercontent.com/110094376/189726431-5cdf002b-2999-4b9a-822f-a706f46b2d39.png)
+
+```
+ggplot(data = daily_activity) +
+  aes(x= sedentary_hours, y = calories) +
+  geom_point(color = 'purple') +
+  geom_smooth(method = "loess") +
+  labs(x = 'Sedentary hours', y = 'Calories burned', title = 'Calories burned vs sedentary hours')
+```
+![image](https://user-images.githubusercontent.com/110094376/189726701-2e6cd103-f068-49a7-9cce-3be6165f4bbb.png)
 
 
 
