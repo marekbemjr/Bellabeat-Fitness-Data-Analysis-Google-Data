@@ -254,7 +254,7 @@ ggplot(data = weight_merge) +
   geom_violin(fill = 'pink') +
   labs(x = 'Very active minutes', y = 'Weight(kg)', title = 'Relationship between weight and physical activity')
 ```
-![image](https://user-images.githubusercontent.com/110094376/189732189-be4280c2-0600-4c01-b8a2-923744af7b98.png)
+![image](https://user-images.githubusercontent.com/110094376/189732442-6969d0b6-cc48-47f2-bfa1-cb295d016284.png)
 
 ```
 ggplot(data = weight_merge) +
