@@ -240,5 +240,31 @@ ggplot(data = daily_activity) +
 ```
 ![image](https://user-images.githubusercontent.com/110094376/189726701-2e6cd103-f068-49a7-9cce-3be6165f4bbb.png)
 
+Positive correlation between calories burned and total distance/total active hours. The relationship between sedentary hours and calories burned after 17 hours the values drop, which may indicate fatigue and too much sedentary work.
+
+## Next I would like to check relationship between weight & physical activity, where after we infer that users weighing around 60kg & 85kg are the most active.
+
+MERGE the tables so we can carry out plotting.
+
+```weight_merge <- merge(daily_activity, weight, by=c('id'))
+```
+```
+ggplot(data = weight_merge) +
+  aes(x = very_active_minutes, y = weight_kg) +
+  geom_violin(fill = 'pink') +
+  labs(x = 'Very active minutes', y = 'Weight(kg)', title = 'Relationship between weight and physical activity')
+```
+
+![image](https://user-images.githubusercontent.com/110094376/189731635-a5b6254f-bb88-4547-ac75-eee1037fd157.png)
+
+```
+ggplot(data = weight_merge) +
+  aes(x = total_steps, y = weight_kg) +
+  geom_violin(fill = 'purple') +
+  labs(x = 'Total steps', y = 'Weight(kg)', title = 'Relationship between weight and physical activity')
+```
+
+![image](https://user-images.githubusercontent.com/110094376/189731814-e889dc22-11ff-4ff2-9496-37d901f53456.png)
+
 
 
