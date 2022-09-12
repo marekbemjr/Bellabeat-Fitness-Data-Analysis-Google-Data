@@ -79,7 +79,7 @@ daily_activity <- read.csv("dailyActivity_merged.csv")
 daily_sleep <- read.csv("sleepDay_merged.csv")
 weight <- read.csv("weightLogInfo_merged.csv")
 ```
-I started inspect data to see if there are any errors with formatting
+Examine the date, inspect data to see if there are any errors with formatting
 
 ```
 head(daily_activity)
@@ -89,4 +89,63 @@ head(weight)
 str(daily_activity)
 str(daily_sleep)
 str(weight)
+```
+
+Check for NA, and remove duplicates for three main tables: daily_activity, daily_slepp and weight:
+```
+sum(is.na(daily_activity))
+sum(is.na(daily_sleep))
+sum(is.na(weight))
+
+sum(duplicated(daily_actdsleep_day))
+sum(duplicated(daily_sleep))
+sum(duplicated(weight))
+
+sleep_day <- sleep_day[!duplicated(sleep_day), ]
+```
+After a view of the output, there were a few issues, action to do:
+1. Removing weight$fat and daily_activity$logged_activities_distance, as it has little to no context and would not be helpful during the analysis 
+2. Add extra column: a day of the week, sedentary hours & total active hours column for further analysis in daily_activity database.
+3. daily_activity$ActivityDate — format CHR not as a date format
+4. daily_sleep$SleepDay — format CHR not as a date format
+5. weight_log$Date — format CHR not as a date format
+6. the naming of the column names (camelCase)
+
+**Removing weight$fat and daily_activity$logged_activities_distance, as it has little to no context and would not be helpful during the analysis**
+
+```
+weight <- weight %>% 
+  select(-c(fat))
+daily_activity <-daily_activity %>% 
+  select(-c(logged_activities_distance))
+```
+**Add extra column**
+
+```
+daily_activity$total_active_hours = round((daily_activity$very_active_minutes + daily_activity$fairly_active_minutes + daily_activity$lightly_active_minutes)/60, digits = 2)
+daily_activity$sedentary_hours = round((daily_activity$sedentary_minutes)/60, digits = 2)
+
+daily_sleep$hours_in_bed = round((daily_sleep$total_time_in_bed)/60, digits = 2)
+daily_sleep$hours_asleep = round((daily_sleep$total_minutes_asleep)/60, digits = 2)
+daily_sleep$time_taken_to_sleep = (daily_sleep$total_time_in_bed - daily_sleep$total_minutes_asleep)
+
+weight <- weight %>% 
+  mutate(bmi2 = case_when(
+    bmi > 24.9 ~ 'Overweight',
+    bmi > 18.5 ~ 'Underweight',
+    TRUE ~ "Healthy"
+ ```
+ 
+**Change date format**
+```
+daily_activity$activity_date <- as.Date(daily_activity$activity_date,'%m/%d/%y')
+daily_sleep$sleep_day <- as.Date(daily_sleep$sleep_day, '%m/%d/%y')
+weight$date <- parse_date_time(weight$date, '%m/%d/%y %H:%M:%S %p')
+```
+
+**Clean the column naming** 
+```
+daily_activity <- clean_names(daily_activity)
+daily_sleep <- clean_names(daily_sleep)
+weight <- clean_names(weight)
 ```
