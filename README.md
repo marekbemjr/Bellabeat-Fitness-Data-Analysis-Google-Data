@@ -189,6 +189,13 @@ ggplot(data = daily_activity) +
   geom_col(fill =  'red') +
   labs(x = 'Day of week', y = 'Total very active minutes', title = 'Total activity in a week')
 ```
+![total_active](https://user-images.githubusercontent.com/110094376/189724467-800985ef-e04b-4a73-b60c-1149a3679b6c.png)
 
+```
+ggplot(data = daily_activity) +
+  aes(x = day_of_week, y = calories) +
+  geom_col(fill =  'green') +
+  labs(x = 'Day of week', y = 'Calories burned', title = 'Total calories burned in a week')
+```
 
 
