@@ -192,6 +192,7 @@ ggplot(data = daily_activity) +
 ```
 ![total_active](https://user-images.githubusercontent.com/110094376/189724467-800985ef-e04b-4a73-b60c-1149a3679b6c.png)
 
+
 ```
 ggplot(data = daily_activity) +
   aes(x = day_of_week, y = calories) +
@@ -199,6 +200,7 @@ ggplot(data = daily_activity) +
   labs(x = 'Day of week', y = 'Calories burned', title = 'Total calories burned in a week')
 ```
 ![image](https://user-images.githubusercontent.com/110094376/189724893-2eba6849-89e9-4b58-b941-886e829ac4bd.png)
+
 
 ```
 ggplot(data = daily_activity) +
@@ -208,6 +210,7 @@ ggplot(data = daily_activity) +
 ```
 
 ![image](https://user-images.githubusercontent.com/110094376/189725118-4c613929-913a-4415-bcf5-91882c320ca9.png)
+
 
 Users spend more time engaged in physical activity specifically on Sundays, which then proceeds to wane throughout the week with a slight peak on Thursdays which then sees a slow climb on Saturdays.
 
@@ -222,6 +225,7 @@ ggplot(data = daily_activity) +
 ```
 ![image](https://user-images.githubusercontent.com/110094376/189726178-03102513-9292-4b98-aa8d-ca326f530c5a.png)
 
+
 ```
 ggplot(data = daily_activity) +
   aes(x= total_distance, y = calories) +
@@ -230,6 +234,7 @@ ggplot(data = daily_activity) +
   labs(x = 'Total distance', y = 'Calories burned', title = 'Calories burned vs total distance')
 ```
 ![image](https://user-images.githubusercontent.com/110094376/189726431-5cdf002b-2999-4b9a-822f-a706f46b2d39.png)
+
 
 ```
 ggplot(data = daily_activity) +
@@ -246,7 +251,8 @@ Positive correlation between calories burned and total distance/total active hou
 
 MERGE the tables so we can carry out plotting.
 
-```weight_merge <- merge(daily_activity, weight, by=c('id'))
+```
+weight_merge <- merge(daily_activity, weight, by=c('id'))
 ```
 ```
 ggplot(data = weight_merge) +
@@ -255,6 +261,7 @@ ggplot(data = weight_merge) +
   labs(x = 'Very active minutes', y = 'Weight(kg)', title = 'Relationship between weight and physical activity')
 ```
 ![image](https://user-images.githubusercontent.com/110094376/189732442-6969d0b6-cc48-47f2-bfa1-cb295d016284.png)
+
 
 ```
 ggplot(data = weight_merge) +
