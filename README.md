@@ -169,4 +169,26 @@ summary(daily_activity$sedentary_hours)
 summary(daily_activity$very_active_minutes)
 summary(daily_sleep$hours_asleep)
 ```
-![summary](https://"C:\Users\bemo_\Documents\Case study Bellabeat\avarage_daily_activity.png")
+![summary](https://user-images.githubusercontent.com/110094376/189719187-325a6463-acfb-4e00-bf41-55549463f386.png)
+
+**The conclusions are:**
+
+The average number of steps per day were 8319, which is within the 6000–8000 recommended steps per day.
+
+The average sedentary hours were 15.87 hours, which is absurdly high, recommended limit of 7–10 hours.
+
+The average very active minutes also is less of the recommended 30 minutes of vigorous exercise every day.
+
+The average hours spent asleep (6.9) also barely hits the quota of the recommended sleep time of 7–9 hours.
+
+
+By using ggplot for this section of the analysis phase we can check which days are users most active:
+```
+ggplot(data = daily_activity) +
+  aes(x = day_of_week, y = total_active_hours) +
+  geom_col(fill =  'red') +
+  labs(x = 'Day of week', y = 'Total very active minutes', title = 'Total activity in a week')
+```
+
+
+
