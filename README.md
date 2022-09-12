@@ -197,5 +197,14 @@ ggplot(data = daily_activity) +
   geom_col(fill =  'green') +
   labs(x = 'Day of week', y = 'Calories burned', title = 'Total calories burned in a week')
 ```
+![image](https://user-images.githubusercontent.com/110094376/189724893-2eba6849-89e9-4b58-b941-886e829ac4bd.png)
 
+```
+ggplot(data = daily_activity) +
+  aes(x = day_of_week, y = total_distance) +
+  geom_col(fill =  'orange') +
+  labs(x = 'Day of week', y = 'Total distance', title = 'Total distance taken in a week')
+```
+
+![image](https://user-images.githubusercontent.com/110094376/189725118-4c613929-913a-4415-bcf5-91882c320ca9.png)
 
