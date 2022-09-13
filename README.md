@@ -244,7 +244,7 @@ ggplot(data = daily_activity) +
 ```
 ![image](https://user-images.githubusercontent.com/110094376/189726701-2e6cd103-f068-49a7-9cce-3be6165f4bbb.png)
 
-Positive correlation between calories burned and total distance/total active hours. The relationship between sedentary hours and calories burned after 17 hours the values drop, which may indicate fatigue and too much sedentary work.
+Positive correlation between calories burned and total distance/total active hours which indicates that the more time you spend engaged in physical activity, the more calories you tend to burn. The relationship between sedentary hours and calories burned after 17 hours the values drop, which may indicate fatigue and too much sedentary work.
 
 ### Next I would like to check relationship between weight & physical activity. To do that I marged two dataframes. 
 
@@ -280,5 +280,6 @@ Most users just simply spend too much time sedentary, mainly 10–21 hours and m
 ![image](https://user-images.githubusercontent.com/110094376/189910190-3a58982e-895d-4f99-8c9e-3d9715c31943.png)
 
 The graph confirms the average sleep time, which almost amounts to a minimum sleep time of 7 hours. However, a certain group sleeps below this value. 
+
 
 
