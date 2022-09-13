@@ -281,14 +281,34 @@ The graph confirms the average sleep time, which almost amounts to a minimum sle
 
 
 
-The last two graphs related with sleep and weight. Sleep deprivation is most prevalent in the 68-72 kg and 50-55 kg weight groups. 
+**The last 3 graphs related with sleep and weight.**
+
+Sleep deprivation is most prevalent in the 68-72 kg and 50-55 kg weight groups. 
 
 ![image](https://user-images.githubusercontent.com/110094376/189913995-31361994-4637-4b9d-8e07-e133df745f93.png)
 
-People who include the recommended 7-9 hours of sleep need the least amount of time to fall asleep after going to bed. The largest group that has problems falling asleep quickly is the 60-64kg weight group. 
+People who include the recommended 7-9 hours of sleep need the least amount of time to fall asleep after going to bed. The group of users weighing 60-70kg and 90 kg is particularly prone to this, with times as short as 60 minutes. 
 
 ![image](https://user-images.githubusercontent.com/110094376/189920163-665c3281-16b5-43ee-9f11-bd9c354aed1d.png)
 
 ![image](https://user-images.githubusercontent.com/110094376/189920292-75c3ee49-8feb-4e61-bd04-58be7c82a79d.png)
 
 
+## 5. SHARE 
+
+![image](https://user-images.githubusercontent.com/110094376/189932777-f89888c1-9b67-4dda-aa14-7de57bf9f8e7.png)
+
+
+## 6. ACT 
+
+Conclusion based on our analysis:
+
+
+
+Users spend more time engaged in physical activity particularly on Sundays, activity then proceeds to decline during the week with a slight peak on Thursdays, which then sees a slow increase on Saturdays. 
+Motivation levels & free time are higher on the weekends, which would provide an opportunity for users to sneak in a workout.
+As work load decreases, a window of opportunity to exercise would present itself in the midweek (Thursdays)
+We see an alltime low of recorded activity on Friday’s due to the possibility of social engagement with friends/coworkers after working hours.
+The greatest activity is seen in users at 80-90 kg, which may indicate greater motivation and a desire to be healthier after sedentary work during the week. 
+
+Despite a large group of users who sleep between 7-9 hours as recommended, it is possible to observe quite a large group who sleep too little. They often have problems falling asleep after going to bed. The group of users weighing 70-75 and 90 kg is particularly prone to this, with times as short as 60 minutes. 
