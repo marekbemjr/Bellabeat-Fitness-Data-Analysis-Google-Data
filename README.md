@@ -246,7 +246,7 @@ ggplot(data = daily_activity) +
 
 Positive correlation between calories burned and total distance/total active hours. The relationship between sedentary hours and calories burned after 17 hours the values drop, which may indicate fatigue and too much sedentary work.
 
-### Next I would like to check relationship between weight & physical activity, where after we infer that users weighing around 60kg & 85kg are the most active. To do that I marged two dataframes. 
+### Next I would like to check relationship between weight & physical activity. To do that I marged two dataframes. 
 
 _MERGE the tables so we can carry out plotting._
 
@@ -256,9 +256,9 @@ weight_merge <- merge(daily_activity, weight, by=c('id'))
 
 ### Analize and share visualization in Tableau
 
+![image](https://user-images.githubusercontent.com/110094376/189907296-b00e85c5-5851-47ee-8c39-ee8ac9ef0a25.png)
+
+![image](https://user-images.githubusercontent.com/110094376/189907581-19f85b26-fa5b-44ca-9559-41561c6cfc2c.png)
 
 
-
-
-
- 
+After we infer that users weighing around 60kg & 85kg are the most active. 
