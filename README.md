@@ -312,3 +312,12 @@ We see an alltime low of recorded activity on Friday’s due to the possibility 
 The greatest activity is seen in users at 80-90 kg, which may indicate greater motivation and a desire to be healthier after sedentary work during the week. 
 
 Despite a large group of users who sleep between 7-9 hours as recommended, it is possible to observe quite a large group who sleep too little. They often have problems falling asleep after going to bed. The group of users weighing 70-75 and 90 kg is particularly prone to this, with times as short as 60 minutes. 
+
+
+Marketing recommendations to expand globally:
+
+- Further analysis of the results and comparison with Bellabeat data with a larger sample size. 
+- Educational healthy style campaign encourages users to have short active exercises during the week, even during work breaks which should be an obligation, how    important is sleep and how to stop using electronics and engaging in physical and mental activities that contribute to sleep problems well before bedtime. 
+- Improving and adding new features to their productions. To the app and the Leaf wristband a function that reminds you to go to bed or turn off your phone or after a prolonged period of sedentary minutes, signaling the user it's time to get active. Also extending the Bellabeat app with a meditation function tab where the user would have several different recordings to choose from. 
+- 
+- 
