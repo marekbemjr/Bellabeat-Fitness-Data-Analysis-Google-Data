@@ -183,7 +183,7 @@ The average hours spent asleep (6.9) also barely hits the quota of the recommend
 
 
 
-## By using ggplot for this section of the analysis phase we can check which days are users most active:
+### By using ggplot for this section of the analysis phase I checked which days are users most active:
 ```
 ggplot(data = daily_activity) +
   aes(x = day_of_week, y = total_active_hours) +
@@ -213,7 +213,7 @@ ggplot(data = daily_activity) +
 
 Users spend more time engaged in physical activity specifically on Sundays, which then proceeds to wane throughout the week with a slight peak on Thursdays which then sees a slow climb on Saturdays.
 
-## Next investigate the relationship between total active hours, total distance, and sedentary hours against calories burned:
+### Next investigate the relationship between total active hours, total distance, and sedentary hours against calories burned:
 
 ```
 ggplot(data = daily_activity) +
@@ -246,14 +246,17 @@ ggplot(data = daily_activity) +
 
 Positive correlation between calories burned and total distance/total active hours. The relationship between sedentary hours and calories burned after 17 hours the values drop, which may indicate fatigue and too much sedentary work.
 
+### Next I would like to check relationship between weight & physical activity, where after we infer that users weighing around 60kg & 85kg are the most active. To do that I marged two dataframes. 
 
-## Next I would like to check relationship between weight & physical activity, where after we infer that users weighing around 60kg & 85kg are the most active.
-## To do that I marge to dataframes and switch visualization to Tableau
-MERGE the tables so we can carry out plotting.
+_MERGE the tables so we can carry out plotting._
 
 ```
 weight_merge <- merge(daily_activity, weight, by=c('id'))
 ```
+
+### Analize and share visualization in Tableau
+
+
 
 
 
