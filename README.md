@@ -208,7 +208,6 @@ ggplot(data = daily_activity) +
   geom_col(fill =  'orange') +
   labs(x = 'Day of week', y = 'Total distance', title = 'Total distance taken in a week')
 ```
-
 ![image](https://user-images.githubusercontent.com/110094376/189725118-4c613929-913a-4415-bcf5-91882c320ca9.png)
 
 
@@ -249,29 +248,14 @@ Positive correlation between calories burned and total distance/total active hou
 
 
 ## Next I would like to check relationship between weight & physical activity, where after we infer that users weighing around 60kg & 85kg are the most active.
-
+## To do that I marge to dataframes and switch visualization to Tableau
 MERGE the tables so we can carry out plotting.
 
 ```
 weight_merge <- merge(daily_activity, weight, by=c('id'))
 ```
-```
-ggplot(data = weight_merge) +
-  aes(x = very_active_minutes, y = weight_kg) +
-  geom_violin(fill = 'pink') +
-  labs(x = 'Very active minutes', y = 'Weight(kg)', title = 'Relationship between weight and physical activity')
-```
-![image](https://user-images.githubusercontent.com/110094376/189732442-6969d0b6-cc48-47f2-bfa1-cb295d016284.png)
 
 
-```
-ggplot(data = weight_merge) +
-  aes(x = total_steps, y = weight_kg) +
-  geom_violin(fill = 'purple') +
-  labs(x = 'Total steps', y = 'Weight(kg)', title = 'Relationship between weight and physical activity')
-```
-
-![image](https://user-images.githubusercontent.com/110094376/189731814-e889dc22-11ff-4ff2-9496-37d901f53456.png)
 
 
  
