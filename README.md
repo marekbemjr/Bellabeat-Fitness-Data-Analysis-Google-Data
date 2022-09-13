@@ -256,13 +256,11 @@ weight_merge <- merge(daily_activity, weight, by=c('id'))
 
 ### Analize and share visualization in Tableau
 
-![image](https://user-images.githubusercontent.com/110094376/189907296-b00e85c5-5851-47ee-8c39-ee8ac9ef0a25.png)
+As we can see in the 2 graphs below, the most active users are between 55-60kg and 85-90kg. We also see a sharp increase in activity at 70kg and a decrease in activity  for users above 90kg (physical and numerical).
 
-![image](https://user-images.githubusercontent.com/110094376/189907581-19f85b26-fa5b-44ca-9559-41561c6cfc2c.png)
+![image](https://user-images.githubusercontent.com/110094376/189913655-2f549512-d329-4cd9-a82f-4c85e8c48383.png)
 
-
-After we infer that users weighing around 60kg & 85kg are the most active. 
-
+![image](https://user-images.githubusercontent.com/110094376/189913840-47a5145d-7143-4f1e-aa81-4a754677bb74.png)
 
 
 ![image](https://user-images.githubusercontent.com/110094376/189908055-10b90bac-f177-48c3-86c4-5bd2de4a9926.png)
@@ -282,17 +280,15 @@ Most users just simply spend too much time sedentary, mainly 10–21 hours and m
 The graph confirms the average sleep time, which almost amounts to a minimum sleep time of 7 hours. However, a certain group sleeps below this value. 
 
 
-As we can see in the 2 graphs below, the most active users are between 55-60kg and 85-90kg. We also see a sharp increase in activity at 70kg and a decrease in activity  for users above 90kg (physical and numerical).
-
-![image](https://user-images.githubusercontent.com/110094376/189913655-2f549512-d329-4cd9-a82f-4c85e8c48383.png)
-
-![image](https://user-images.githubusercontent.com/110094376/189913840-47a5145d-7143-4f1e-aa81-4a754677bb74.png)
-
 
 The last two graphs related with sleep and weight. Sleep deprivation is most prevalent in the 68-72 kg and 50-55 kg weight groups. 
 
 ![image](https://user-images.githubusercontent.com/110094376/189913995-31361994-4637-4b9d-8e07-e133df745f93.png)
 
-![image](https://user-images.githubusercontent.com/110094376/189914129-aa2ec7a8-f2fd-45d7-b1ca-a1be790526a4.png)
+People who include the recommended 7-9 hours of sleep need the least amount of time to fall asleep after going to bed. The largest group that has problems falling asleep quickly is the 60-64kg weight group. 
+
+![image](https://user-images.githubusercontent.com/110094376/189920163-665c3281-16b5-43ee-9f11-bd9c354aed1d.png)
+
+![image](https://user-images.githubusercontent.com/110094376/189920292-75c3ee49-8feb-4e61-bd04-58be7c82a79d.png)
 
 
