@@ -283,3 +283,12 @@ The graph confirms the average sleep time, which almost amounts to a minimum sle
 
 
 
+![image](https://user-images.githubusercontent.com/110094376/189913655-2f549512-d329-4cd9-a82f-4c85e8c48383.png)
+
+![image](https://user-images.githubusercontent.com/110094376/189913840-47a5145d-7143-4f1e-aa81-4a754677bb74.png)
+
+![image](https://user-images.githubusercontent.com/110094376/189913995-31361994-4637-4b9d-8e07-e133df745f93.png)
+
+![image](https://user-images.githubusercontent.com/110094376/189914129-aa2ec7a8-f2fd-45d7-b1ca-a1be790526a4.png)
+
+
