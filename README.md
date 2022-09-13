@@ -262,3 +262,23 @@ weight_merge <- merge(daily_activity, weight, by=c('id'))
 
 
 After we infer that users weighing around 60kg & 85kg are the most active. 
+
+
+
+![image](https://user-images.githubusercontent.com/110094376/189908055-10b90bac-f177-48c3-86c4-5bd2de4a9926.png)
+
+Confirmation that majorty of people will take a total of 5000-1000 steps during the week. However, it can also be seen that some users are below this value. 
+
+
+![image](https://user-images.githubusercontent.com/110094376/189908848-892c8edf-771a-4f7c-98fa-a5953c85e05d.png)
+
+![image](https://user-images.githubusercontent.com/110094376/189909558-07675cce-539d-496d-890b-a964c40ceccb.png)
+
+Most users just simply spend too much time sedentary, mainly 10–21 hours and most users barely exercise as we can see in the huge spike in recorded counts near the 0-10 on the x-axis.
+
+
+![image](https://user-images.githubusercontent.com/110094376/189910190-3a58982e-895d-4f99-8c9e-3d9715c31943.png)
+
+The graph confirms the average sleep time, which almost amounts to a minimum sleep time of 7 hours. However, a certain group sleeps below this value. 
+
+
