@@ -282,10 +282,14 @@ Most users just simply spend too much time sedentary, mainly 10–21 hours and m
 The graph confirms the average sleep time, which almost amounts to a minimum sleep time of 7 hours. However, a certain group sleeps below this value. 
 
 
+As we can see in the 2 graphs below, the most active users are between 55-60kg and 85-90kg. We also see a sharp increase in activity at 70kg and a decrease in activity  for users above 90kg (physical and numerical).
 
 ![image](https://user-images.githubusercontent.com/110094376/189913655-2f549512-d329-4cd9-a82f-4c85e8c48383.png)
 
 ![image](https://user-images.githubusercontent.com/110094376/189913840-47a5145d-7143-4f1e-aa81-4a754677bb74.png)
+
+
+The last two graphs related with sleep and weight. Sleep deprivation is most prevalent in the 68-72 kg and 50-55 kg weight groups. 
 
 ![image](https://user-images.githubusercontent.com/110094376/189913995-31361994-4637-4b9d-8e07-e133df745f93.png)
 
