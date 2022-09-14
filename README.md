@@ -318,6 +318,6 @@ Marketing recommendations to expand globally:
 
 - Further analysis of the results and comparison with Bellabeat data with a larger sample size. 
 - Educational healthy style campaign encourages users to have short active exercises during the week, even during work breaks which should be an obligation, how    important is sleep and how to stop using electronics and engaging in physical and mental activities that contribute to sleep problems well before bedtime. 
-- Improving and adding new features to their productions. To the app and the Leaf wristband a function that reminds you to go to bed or turn off your phone or after a prolonged period of sedentary minutes, signaling the user it's time to get active. Also extending the Bellabeat app with a meditation function tab where the user would have several different recordings to choose from. 
-- 
-- 
+- For those with memberships extra materials to promote healthy lifestyles, meetings, events. Involvement of well-known athletes to encourage more people to get involved in Bellabeat.
+- Improving and adding new features to their productions. To the app and the Leaf wristband or watch Time a function that reminds you to go to bed or turn off your phone or after a prolonged period of sedentary minutes, signaling the user it's time to get active. Also extending the Bellabeat app with a meditation function tab where the user would have several different recordings to choose from. 
+- Bellabeat can implement a rewards programme for those who leading a healthy lifestyle. Earning points for achieving individual goals in a weekly period. Earning badges etc. which can later be exchanged for prizes, discounts in the Bellabeat shop or partners with whom Bellabeat cooperates.
