@@ -151,11 +151,12 @@ daily_activity <- daily_activity[!(daily_activity$calories<=0),]
 daily_activity <- daily_activity_cleaned[!(daily_activity_cleaned$total_active_hours<=0.00),]
 ```
 
-Export dateset to use in Tableau for visualization
+Export dateset to use in Tableau for futher visualizastion.
+
 ```
 write.csv(daily_activity, file ='fitbit_daily_activity.csv')
 write.csv(daily_sleep, file = 'fitbit_sleep_log.csv')
-write.csv(weight, file = 'fitbit_weight.csv')
+write.csv(weight, file = 'fitbit_weight.csv') 
 ```
 
 ## 4. ANALYZE
@@ -316,8 +317,22 @@ Despite a large group of users who sleep between 7-9 hours as recommended, it is
 
 Marketing recommendations to expand globally:
 
-- Further analysis of the results and comparison with Bellabeat data with a larger sample size. 
-- Educational healthy style campaign encourages users to have short active exercises during the week, even during work breaks which should be an obligation, how    important is sleep and how to stop using electronics and engaging in physical and mental activities that contribute to sleep problems well before bedtime. 
-- For those with memberships extra materials to promote healthy lifestyles, meetings, events. Involvement of well-known athletes to encourage more people to get involved in Bellabeat.
-- Improving and adding new features to their productions. To the app and the Leaf wristband or watch Time a function that reminds you to go to bed or turn off your phone or after a prolonged period of sedentary minutes, signaling the user it's time to get active. Also extending the Bellabeat app with a meditation function tab where the user would have several different recordings to choose from. 
-- Bellabeat can implement a rewards programme for those who leading a healthy lifestyle. Earning points for achieving individual goals in a weekly period. Earning badges etc. which can later be exchanged for prizes, discounts in the Bellabeat shop or partners with whom Bellabeat cooperates.
+Further analysis of the results and comparison with Bellabeat data with a larger sample should continue in order to have a better picture on users' habits. 
+
+**My recommendations based on my findings to help influence Bellabeat’s marketing strategy.
+
+1. Education:
+Educational healthy style campaign encourages users to have short active exercises during the week, even during work breaks which should be an obligation, how    important is sleep and how to stop using electronics and engaging in physical and mental activities that contribute to sleep problems well before bedtime. 
+For those with memberships extra materials to promote healthy lifestyles. Organize open/close meetings, events. Involvement of well-known athletes to encourage more people to get involved in Bellabeat.
+
+2. Bellabeat products:
+Improving and adding new features to their productions. To the app and the Leaf wristband or watch Time:
+- a function that reminds you to go to bed and turn off your phone. Track sleep more sophisticatedly (REM sleep tracking, deep sleep tracking) to provide more insights into sleep health, as in the dataset provided, we only had the quantity of sleep, not the quality of sleep.
+- after a prolonged period of sedentary minutes, signaling the user it's time to get active. 
+- extending the Bellabeat app with a meditation or mindfulness function tab where the user would have several different recordings to choose from and it helps (help with sleep). 
+
+3. Membership
+Bellabeat can implement a rewards programme for those who leading a healthy lifestyle. Earning points for achieving individual goals in a weekly period. Earning badges etc. which can later be exchanged for prizes, discounts in the Bellabeat shop or partners with whom Bellabeat cooperates.
+For those with memberships extra materials to promote healthy lifestyles of a newsletter form and short weekly articles or videos. 
+
+
