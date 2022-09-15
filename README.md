@@ -299,6 +299,8 @@ People who include the recommended 7-9 hours of sleep need the least amount of t
 
 ![image](https://user-images.githubusercontent.com/110094376/189932777-f89888c1-9b67-4dda-aa14-7de57bf9f8e7.png)
 
+[Tableau Dashboard](https://public.tableau.com/views/CASESTUDYBellabeatFitnessDataAnalysis/CASESTUDYBellabeatFitnessDataAnalysisDashboard?:language=en-US&:display_count=n&:origin=viz_share_link)
+
 
 ## 6. ACT 
 
