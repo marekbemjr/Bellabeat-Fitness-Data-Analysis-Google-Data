@@ -1,0 +1,175 @@
+---
+title: "Bellabeat Case Study - Marek Bem"
+output: html_notebook
+---
+
+#Step 1: Install and load the packages
+```{r}
+install.packages('tidyverse')
+install.packages('janitor')
+install.packages('lubridate')
+install.packages('skimr')
+
+library(tidyverse) #wrangle data
+library(janitor) #cleaning data
+library(lubridate) #wrangle data attributes
+library(skimr) #summary data
+library(ggplot2) #visualize data
+```
+
+
+#Step 2: Import the databases
+```{r}
+daily_activity <- read.csv("dailyActivity_merged.csv")
+daily_sleep <- read.csv("sleepDay_merged.csv")
+weight <- read.csv("weightLogInfo_merged.csv")
+hourly_step <- read.csv("hourlySteps_merged.csv")
+```
+
+
+#Step 3: Inspect data to see if there are any errors with formatting
+
+```{r}
+head(daily_activity)
+head(daily_sleep)
+head(weight)
+
+str(daily_activity)
+str(daily_sleep)
+str(weight)
+```
+
+
+#Step 4: Check NA and duplicates / remove dupclicate
+
+```{r}
+sum(is.na(daily_activity))
+sum(is.na(daily_sleep))
+sum(is.na(weight))
+
+sum(duplicated(daily_actdsleep_day))
+sum(duplicated(daily_sleep))
+sum(duplicated(weight))
+
+sleep_day <- sleep_day[!duplicated(sleep_day), ]
+```
+
+#Step 5: Change format daily_activity$activity_date, daily_sleep$sleep_day and weight$date into the proper date format 
+
+```{r}
+daily_activity$activity_date <- as.Date(daily_activity$activity_date,'%m/%d/%y')
+daily_sleep$sleep_day <- as.Date(daily_sleep$sleep_day, '%m/%d/%y')
+weight$date <- parse_date_time(weight$date, '%m/%d/%y %H:%M:%S %p')
+```
+
+#Step 6: Removing weight$fat and daily_activity$logged_activities_distance, as it has little to no context and would not be helpful during the analysis 
+
+```{r}
+weight <- weight %>% 
+  select(-c(fat))
+daily_activity <-daily_activity %>% 
+  select(-c(logged_activities_distance))
+```
+
+
+#Step 7 Add new columns which convert the current minutes of collection to hours and round it
+```{r}
+daily_activity$total_active_hours = round((daily_activity$very_active_minutes + daily_activity$fairly_active_minutes + daily_activity$lightly_active_minutes)/60, digits = 2)
+daily_activity$sedentary_hours = round((daily_activity$sedentary_minutes)/60, digits = 2)
+
+daily_sleep$hours_in_bed = round((daily_sleep$total_time_in_bed)/60, digits = 2)
+daily_sleep$hours_asleep = round((daily_sleep$total_minutes_asleep)/60, digits = 2)
+daily_sleep$time_taken_to_sleep = (daily_sleep$total_time_in_bed - daily_sleep$total_minutes_asleep)
+```
+
+#Step 8 Remove rows in which the total_active_hours & calories burned are 
+
+```{r}
+daily_activity_cleaned <- daily_activity[!(daily_activity$calories<=0),]
+daily_activity_cleaned <- daily_activity_cleaned[!(daily_activity_cleaned$total_active_hours<=0.00),]
+```
+
+
+#Step 9: Export dateset to use in Tableau. 
+```{r}
+write.csv(daily_activity, file ='fitbit_daily_activity.csv')
+write.csv(daily_sleep, file = 'fitbit_sleep_log.csv')
+write.csv(weight, file = 'fitbit_weight.csv')
+```
+
+
+#Step 10 Check the average of: Steps taken, sedentary hours, very active minutes & total hours asleep.
+```{r}
+summary(daily_activity$total_steps)
+summary(daily_activity$sedentary_hours)
+summary(daily_activity$very_active_minutes)
+summary(daily_sleep$hours_asleep)
+```
+ 
+```{r}
+ggplot(data = daily_activity) +
+  aes(x = day_of_week, y = total_distance) +
+  geom_col(fill =  'orange') +
+  labs(x = 'Day of week', y = 'Total distance', title = 'Total distance taken in a week')
+ggsave('total_distance.png')
+
+ggplot(data = daily_activity) +
+  aes(x = day_of_week, y = very_active_minutes) +
+  geom_col(fill =  'red') +
+  labs(x = 'Day of week', y = 'Total very active minutes', title = 'Total activity in a week')
+ggsave('total_activity.png')
+
+ggplot(data = daily_activity) +
+  aes(x = day_of_week, y = calories) +
+  geom_col(fill =  'green') +
+  labs(x = 'Day of week', y = 'Calories burned', title = 'Total calories burned in a week')
+ggsave('total_calories.png')
+```
+
+
+  
+#relationship between total active hours, total distance taken, and sedentary hours against calories burned 
+
+```{r}
+ggplot(data = daily_activity) +
+  aes(x= total_active_hours, y = calories) +
+  geom_point(color = 'red') +
+  geom_smooth() +
+  labs(x = 'Total active hours', y = 'Calories burned', title = 'Calories burned vs active hours')
+ggsave('calories_burned_vs_active_hours.png')
+
+ggplot(data = daily_activity) +
+  aes(x= total_distance, y = calories) +
+  geom_point(color = 'orange') +
+  geom_smooth() +
+  labs(x = 'Total steps', y = 'Calories burned', title = 'Calories burned vs total steps')
+ggsave('calories_burned_vs_total_steps.png')
+
+ggplot(data = daily_activity) +
+  aes(x= sedentary_hours, y = calories) +
+  geom_point(color = 'purple') +
+  geom_smooth() +
+  labs(x = 'Sedentary hours', y = 'Calories burned', title = 'Calories burned vs sedentary hours')
+ggsave('calories_burned_vs_sedentary_hours.png')
+```
+
+#MERGE
+weight_merge <- merge(daily_activity, weight, by=c('id'))
+
+#The relationship between weight & physical activity
+```{r}
+ggplot(data = weight_merge) +
+  aes(x = very_active_minutes, y = weight_kg) +
+  geom_violin(fill = 'pink') +
+  labs(x = 'Very active minutes', y = 'Weight(kg)', title = 'Relationship between weight and physical activity')
+ggsave('weight_physical_activity.png')
+
+
+ggplot(data = weight_merge) +
+  aes(x = total_steps, y = weight_kg) +
+  geom_violin(fill = 'purple') +
+  labs(x = 'Total steps', y = 'Weight(kg)', title = 'Relationship between weight and physical activity')
+ggsave('weight_physical_activity_steps.png')
+```
+
+
