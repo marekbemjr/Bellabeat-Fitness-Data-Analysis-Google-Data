@@ -170,6 +170,20 @@ summary(daily_activity$sedentary_hours)
 summary(daily_activity$very_active_minutes)
 summary(daily_sleep$hours_asleep)
 ```
+#Percentage how many user make less then 6000 steps or more then 8000
+```
+proportions(table(daily_activity$total_steps <= 6000))
+proportions(table(daily_activity$total_steps >= 8000))
+
+per_total_steps <- daily_activity %>% 
+  group_by(id) %>% 
+  mutate(Less6000 = if_else(total_steps <= 6000, 1, 0),
+         More8000 = if_else(total_steps >= 8000, 1, 0)) %>% 
+  summarize(Pct6000 = sum(Less6000) / n(),
+            Pct8000 = sum(More8000) / n())
+
+per_total_steps
+```
 ![summary](https://user-images.githubusercontent.com/110094376/189719187-325a6463-acfb-4e00-bf41-55549463f386.png)
 
 **The conclusions are:**
