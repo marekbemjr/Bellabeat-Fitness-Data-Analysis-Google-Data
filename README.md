@@ -170,8 +170,9 @@ summary(daily_activity$sedentary_hours)
 summary(daily_activity$very_active_minutes)
 summary(daily_sleep$hours_asleep)
 ```
-#Percentage how many user make less then 6000 steps or more then 8000
+Calculating the percentage of how many users have taken fewer than 6,000 or more than 8,000 steps.
 ```
+
 proportions(table(daily_activity$total_steps <= 6000))
 proportions(table(daily_activity$total_steps >= 8000))
 
@@ -183,12 +184,13 @@ per_total_steps <- daily_activity %>%
             Pct8000 = sum(More8000) / n())
 
 per_total_steps
+
 ```
 ![summary](https://user-images.githubusercontent.com/110094376/189719187-325a6463-acfb-4e00-bf41-55549463f386.png)
 
 **The conclusions are:**
 
-The average number of steps per day were 8319, which is within the 6000–8000 recommended steps per day.
+The average number of steps per day were 8319, which is within the 6000–8000 recommended steps per day. However, 33% users do not cover at least 6,000 steps per day. 
 
 The average sedentary hours were 15.87 hours, which is absurdly high, recommended limit of 7–10 hours.
 
